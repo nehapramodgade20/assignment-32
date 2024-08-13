@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dice Roller</title>  
+    <style>
+                   body{
+                 min-height: 100vh;
+            }
+            .app-title{
+                text-align: center;
+            }
+            .dice-img{
+                width: 300px;
+                height: 300px;
+                display: block;
+                margin: 20px auto;
+
+
+            }
+            .animate{
+                animation: roll is infinite;
+            }
+            .btn-roll{
+                width: 200px;
+             display: block;
+             margin: 20px auto;
+             font-size: 25px;
+             padding: 10px 20px;
+             border-radius: 10px;
+             border: none;
+             color: #f1ebeb;
+             cursor: pointer;
+             background-color: purple;
+            }
+            @keyframes roll {
+                0%{
+                    transform: rotate(0deg);
+                }
+                100%{
+                    transform: rotate(360deg);  
+                }
+            }
+    </style>
+</head>
+<body>
+    <h1 class="app-title">Dice Roller</h1>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ02DdMk6WriWd2ttrB7k6wi3iXPQo1r--cA&s" alt="dice" class="dice-img" id="dice-img">
+    <button class="btn-roll" onclick="roll()">Roll Dice</button>
+    <script >
+        function roll(){
+  const min = 1;
+  const max = 6;
+  const randomNumber = Math.round(Math.random() * (max-min))+min;
+  console.log(randomNumber);
+  const imgElement = document.getElementById('dice-img');
+  switch(randomNumber){
+    case 1:
+    imgElement.src = 'https://www.shutterstock.com/image-vector/white-3d-isolated-realistic-dice-260nw-2341073947.jpg';
+    break;
+    case 2:
+    imgElement.src = 'https://www.shutterstock.com/image-vector/white-3d-isolated-realistic-dice-260nw-2341073947.jpg';
+    break;
+    case 3:
+    imgElement.src = 'https://www.shutterstock.com/image-vector/white-3d-isolated-realistic-dice-260nw-2341073947.jpg';
+    break;
+    case 4:
+    imgElement.src = 'https://www.shutterstock.com/image-vector/white-3d-isolated-realistic-dice-260nw-2341073947.jpg';
+    break;
+    case 5:
+    imgElement.src = 'https://www.shutterstock.com/image-vector/white-3d-isolated-realistic-dice-260nw-2341073947.jpg';
+    break;
+    case 6:
+    imgElement.src = 'https://www.shutterstock.com/image-vector/white-3d-isolated-realistic-dice-260nw-2341073947.jpg';
+    break;
+    default:
+        imgElement.src = 'https://www.shutterstock.com/image-vector/white-3d-isolated-realistic-dice-260nw-2341073947.jpg';
+
+  
+  }
+
+        }
+    </script>
+</body>
+</html>
+  
+
